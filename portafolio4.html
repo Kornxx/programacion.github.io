@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+    <script>
+ function millasametros(){
+    let millas, millas_nauticas
+    millas=parseFloat(document.getElementById("Millas").value);
+    millas_nauticas=millas*1852;
+    parseFloat(document.getElementById("millas_nauticas").value=millas_nauticas);
+    }
+
+
+    function calculardescuento(){
+        let precio_original, descuento, precio_final
+        precio_original=parseFloat(document.getElementById("precio_original").value);
+        descuento=parseFloat(document.getElementById("descuento").value);
+    precio_final=precio_original-(descuento/100*precio_original);
+    parseFloat(document.getElementById("precio_final").value=precio_final);
+    }
+
+
+    function calcularporcentaje (){
+        let primer_precio, segundo_precio, descuentazo
+        primer_precio=parseFloat(document.getElementById("primer_precio").value);
+        segundo_precio=parseFloat(document.getElementById("segundo_precio").value);
+        descuentazo=(primer_precio-segundo_precio)/primer_precio*100
+        parseFloat(document.getElementById("descuentazo").value=descuentazo);    
+    }
+
+
+    function Calcular_S_R_M_Y_D (){
+    let first_N, Second_N, Summer, Road, Miami, Discord 
+    first_N=parseFloat(document.getElementById("first_N").value);
+    Second_N=parseFloat(document.getElementById("Second_N").value);
+    Summer=first_N+Second_N
+    parseFloat(document.getElementById("Summer").value=Summer);
+    Road=first_N-Second_N
+    parseFloat(document.getElementById("Road").value=Road);
+    Miami=first_N*Second_N
+    parseFloat(document.getElementById("Miami").value=Miami);
+    Discord=first_N/Second_N
+    parseFloat(document.getElementById("Discord").value=Discord);
+    }
+
+
+    function volumenesfera (){
+    let radioes, volumenes
+    radioes=parseFloat(document.getElementById("radioes").value);
+    volumenes=(4/3)*3.1416*(radioes**3)
+    parseFloat(document.getElementById("volumenes").value=volumenes);
+    }
+
+
+    function pulgadasadedos () {
+    let pulgadas, centimetrosdedos
+    pulgadas=parseFloat(document.getElementById("pulgadas").value);
+    centimetrosdedos=pulgadas*2.54
+    parseFloat(document.getElementById("centimetrosdedos").value=centimetrosdedos);
+    }
+
+
+    function convertidordetiempo () {
+    let Segundostotal, Horas, Minutos, Segundosres, Segundosfinal
+    Segundostotal=parseInt(document.getElementById("Segundostotal").value);
+    Horas=Math.floor(Segundostotal/3600);
+    Segundosres=Segundostotal%3600;
+    Minutos=Math.floor(Segundosres/60);
+    Segundosfinal=Segundosres%60;
+    parseInt(document.getElementById("Horas").value=Horas);
+    parseInt(document.getElementById("Minutos").value=Minutos);
+    parseInt(document.getElementById("Segundosfinal").value=Segundosfinal);
+    }
+
+    function  Volumencilindro (){
+    let alturaci, radioci, volumenci
+    alturaci=parseFloat(document.getElementById("alturaci").value);
+    radioci=parseFloat(document.getElementById("radioci").value);
+    volumenci=3.1416*(radioci*radioci)*alturaci
+    document.getElementById("volumenci").value=volumenci;
+    }
+
+
+     function  volumencono(){
+    let radioco, alturaco, volumenco
+    radioco=parseFloat(document.getElementById("radioco").value);
+    alturaco=parseFloat(document.getElementById("alturaco").value);
+    volumenco=(3.1416*(radioco**2)*alturaco)/3
+    document.getElementById("volumenco").value=volumenco;
+    }
+
+
+     function  volumencubo(){
+    let Ladocubo, volumencu
+    Ladocubo=parseFloat(document.getElementById("Ladocubo").value);
+    volumencu=Ladocubo**3
+    document.getElementById("volumencu").value=volumencu;
+    }
+
+ </script>
+</head>
+<body style="background-color: rgb(59, 57, 57); text-align: center; 
+padding: 10px;
+margin: auto;">
+    <h1>1. Convertir millas a metros:</h1>
+<label for="millas">Millas:</label>
+<input type="number" placeholder="tus millas" id="Millas"> <br>
+<button onclick="millasametros()">convertir</button> <br>
+<label for="millas_nauticas">Resultado:</label> 
+<input type="tu resultado" placeholder="Tus millas nauticas" id="millas_nauticas" readonly>
+
+
+<h1> 2. calcular descuento de tu producto:</h1>
+ <label for="precio_original">cual es tu precio:</label>
+ <input type="number" placeholder="tu precio" id="precio_original"> <br>
+<label for="descuento">Cual es tu descuento:</label> 
+<input type="number" placeholder="descuento" id="descuento"> <br>
+<button onclick="calculardescuento()">calcular descuento</button> <br>
+<label for="precio_final">resultado:</label> 
+<input type="descuentazo" placeholder="aqui tu Resultado" id="precio_final" readonly>
+
+
+<h1> 3. mostrar el precio correspondiente</h1>
+<label for="primer_precio">Cual es tu primer precio?</label>
+<input type="number" placeholder="aqui tu numero" id="primer_precio"> <br>
+<label for="segundo_precio">Cual es tu precio ya con el descuento?</label>
+<input type="number" placeholder="tu precio con descuento aqui" id="segundo_precio"> <br>
+<button onclick="calcularporcentaje()">Calcula tu porcentaje de descuento</button> <br>
+<label for="descuentazo">el porcentaje de tu descuento es:</label> 
+<input type="descuentazo" id="descuentazo" placeholder="tu porcentaje" readonly>
+
+
+<h1>4. Mostrar suma, resta, multiplicacion y division</h1>
+<label for="first_N">Cual sera tu primer numero?</label>
+<input type="number" placeholder="first number" id="first_N"> <br>
+<label for="Second_N">Cual sera tu segundo numero?</label>
+<input type="number" placeholder="second number" id="Second_N"> <br>
+<button onclick="Calcular_S_R_M_Y_D()">Calcular</button> <br>
+<label for="Summer">Tu suma es:</label>
+<input type="number" placeholder="tu suma" id="Summer" readonly> <br>
+<label for="Road">Tu resta es:</label>
+<input type="number" placeholder="tu resta" id="Road" readonly> <br>
+<label for="Miami">Tu multiplicacion es:</label>
+<input type="number" placeholder="tu multiplicacion" id="Miami" readonly> <br>
+<label for="Discord">Tu division es:</label>
+<input type="number" placeholder="tu division" id="Discord" readonly> <br>
+
+
+<h1>5. Volumen de una esfera</h1>
+<label for="radioes">Cual es tu radio de la esfera?</label>
+<input type="number" placeholder="aqui tu radio" id="radioes"> <br>
+<button onclick="volumenesfera ()">Calcular volumen</button> <br> 
+<label for="volumenes">El volumen de tu esfera:</label>
+<input type="number" placeholder="tu volumen" id="volumenes" readonly> <br>
+
+
+<h1>6. Convertir pulgadas a centimetros</h1>
+<label for="pulgadas">tus pulgadas:</label>
+<input type="number" placeholder="aqui tus pulgadas" id="pulgadas"> <br>
+<button onclick="pulgadasadedos ()">Convertir a centimetros</button> <br>
+<label for="centimetrosdedos">En centimetros es:</label>
+<input type="number" placeholder="tus centimetros" id="centimetrosdedos" readonly>
+
+
+<h1>7. Cantidad de segundos a horas, minutos, segundos</h1>
+<label for="Segundostotal">Escribe tu cantidad de segundos:</label>
+<input type="number" placeholder="tus numeros:" id="Segundostotal"> <br>
+<button onclick="convertidordetiempo ()">Convertir</button> <br>
+<label for="Horas">Horas:</label>
+<input type="number" placeholder="Tus horas" id="Horas" readonly> <br>
+<label for="Minutos">Minutos:</label>
+<input type="number" placeholder="tus minutos" id="Minutos" readonly> <br>
+<label for="Segundosfinal">Segundos:</label>
+<input type="number" placeholder="tus segundos" id="Segundosfinal" readonly>
+
+
+<h1>8. Volumen de un cilindro</h1>
+<label for="alturaci">Cual es la altura de tu cilindro?</label>
+<input type="number" placeholder="la altura" id="alturaci"> <br>
+<label for="radioci">Cual es la radio de tu cilindro?</label>
+<input type="number" placeholder="tu radio" id="radioci"> <br>
+<button onclick="Volumencilindro ()">Sacar volumen</button> <br>
+<label for="volumenci">Este es el volumen:</label>
+<input type="number" placeholder="el volumen" id="volumenci" readonly>
+
+
+<h1>9. Volumen de un cono</h1>
+<label for="radioco">Cual es la radio de tu cono?</label>
+<input type="number" placeholder="tu radio" id="radioco"> <br>
+<label for="alturaco">Cual es la altura de tu cono?</label>
+<input type="number" placeholder="tu altura" id="alturaco"> <br>
+<button onclick="volumencono ()">Sacar volumen</button> <br>
+<label for="volumenco">El volumen:</label>
+<input type="number" placeholder="tu volumen" id="volumenco" readonly>
+
+
+<h1>10. volumen de un cubo</h1>
+<label for="Ladocubo">Cual es la longitud del lado del cubo?</label>
+<input type="number" placeholder="tu longitud" id="Ladocubo"> <br>
+<button onclick="volumencubo ()">Sacar volumen</button> <br>
+<label for="volumencu">El volumen:</label>
+<input type="number" placeholder="tu Volumen" id="volumencu" readonly>
+</body>
+</html>
